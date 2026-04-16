@@ -1,12 +1,12 @@
 # Serverless Spark ETL Pipeline on AWS
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates the implementation of a fully automated, event-driven serverless ETL pipeline using AWS services. The pipeline processes raw product review data stored in Amazon S3 using an AWS Glue Spark job, triggered automatically by AWS Lambda upon file upload.
 
 ---
 
-## 🎯 Objective
+##  Objective
 
 * Build an automated, event-driven data pipeline
 * Process and transform raw CSV data using PySpark
@@ -15,13 +15,13 @@ This project demonstrates the implementation of a fully automated, event-driven 
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 S3 (Landing Bucket) → Lambda Trigger → AWS Glue (Spark ETL Job) → S3 (Processed + Analytics Output)
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 * File: `reviews.csv`
 * Columns:
@@ -35,7 +35,7 @@ S3 (Landing Bucket) → Lambda Trigger → AWS Glue (Spark ETL Job) → S3 (Proc
 
 ---
 
-## ⚙️ AWS Services Used
+##  AWS Services Used
 
 ### 1. Amazon S3
 
@@ -86,7 +86,7 @@ S3 (Landing Bucket) → Lambda Trigger → AWS Glue (Spark ETL Job) → S3 (Proc
 
 ---
 
-## 🔄 Data Pipeline Workflow
+##  Data Pipeline Workflow
 
 1. Upload `reviews.csv` to the S3 landing bucket
 2. S3 event triggers Lambda function
@@ -99,7 +99,7 @@ S3 (Landing Bucket) → Lambda Trigger → AWS Glue (Spark ETL Job) → S3 (Proc
 
 ---
 
-## 🧪 Transformations Performed
+##  Transformations Performed
 
 * Cast `rating` to integer and handle null values
 * Convert `review_date` to proper date format
@@ -108,7 +108,7 @@ S3 (Landing Bucket) → Lambda Trigger → AWS Glue (Spark ETL Job) → S3 (Proc
 
 ---
 
-## 📊 Analytical Queries
+##  Analytical Queries
 
 ### 1. Average Rating per Product
 
@@ -128,7 +128,7 @@ S3 (Landing Bucket) → Lambda Trigger → AWS Glue (Spark ETL Job) → S3 (Proc
 
 ---
 
-## 📁 Output Structure
+##  Output Structure
 
 ```id="x3m4q2"
 processed-bucket/
@@ -141,7 +141,7 @@ processed-bucket/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1. Upload `reviews.csv` to the S3 landing bucket
 2. Lambda triggers automatically
@@ -150,7 +150,7 @@ processed-bucket/
 
 ---
 
-## ⚠️ Challenges & Solutions
+##  Challenges & Solutions
 
 ### 1. Lambda Timeout Issue
 
@@ -169,7 +169,7 @@ processed-bucket/
 
 ---
 
-## 💡 Key Learnings
+##  Key Learnings
 
 * Building event-driven serverless pipelines
 * Working with AWS Glue for Spark-based ETL
@@ -179,7 +179,7 @@ processed-bucket/
 
 ---
 
-## 📌 Conclusion
+##  Conclusion
 
 This project demonstrates how AWS serverless services can be combined to build a scalable and automated data pipeline. The use of Lambda and Glue eliminates manual intervention, enabling efficient and real-time data processing.
 
